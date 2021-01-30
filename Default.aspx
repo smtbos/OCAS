@@ -19,7 +19,9 @@
                         <h2 class="font-weight-bold">Why India Health </h2>
                         <h4>India Health  is a Wildly Used Online Platform for Creating Medical Reports.</h4>
                         <a href="signin.php">
-                            <button class="btn btn-signup btn-lg font-weight-bold mt-2">Sign Up Now</button></a>
+                            <button class="btn btn-signup btn-lg font-weight-bold mt-2">Sign Up Now</button>
+
+                        </a>
                     </div>
                     <div class="col-6 d-md-block d-none offset-md-1 my-auto">
                         <img src="public/home/banner-main2.png" height="500">

@@ -40,3 +40,10 @@
 main.container {
     min-height: calc(100vh - 328px);
 }
+
+.footer-website-title {
+    color: #f15a29 !important;
+    font-weight:bold;
+    font-size: x-large;
+    margin-left: 9px;
+}

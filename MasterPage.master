@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./public/css/jquery-confirm.min.css" />
     <link rel="stylesheet" href="./public/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="./public/fa/css/font-awesome.min.css" />
+    
     <link rel="stylesheet" href="./public/css/style.css" />
     <link rel="stylesheet" href="./public/home.css" />
     <style>
@@ -34,7 +35,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">
                 <%--<img src="https://indiahealth.smtcodes.in/public/logo2.png" height="40">--%>
-                OCAS
+                <%= Helper.WEBSITE_NAME %>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarMenu">
                 <span class="navbar-toggler-icon"></span>
@@ -84,12 +85,13 @@
             <div class="row">
                 <div class="col-lg-3 col-12 text-lg-left text-center pt-4 pt-4">
                     <div class="row">
-                        <div class="col-lg-9 offset-lg-0 col-8 offset-2">
-                            <img src="https://indiahealth.smtcodes.in/public/logo.png" class="w-100">
+                        <div class="col-lg-9 offset-lg-0 col-8 offset-2 footer-website-title">
+                            <%--<img src="https://indiahealth.smtcodes.in/public/logo.png" class="w-100"> --%>
+                            <%=Helper.WEBSITE_NAME%>
                         </div>
                         <div class="col-12 pl-4">
-                            <a href="mailto:admin@smtcodes.in" class="text-dark">admin@smtcodes.in</a><br>
-                            <a href="tel:+917359691439" class="text-dark">+91 73596 91439</a>
+                            <a href="mailto:<%= Helper.WEBSITE_EMAIL %>" class="text-dark"><%= Helper.WEBSITE_EMAIL %></a><br>
+                            <a href="tel:+91<%= Helper.WEBSITE_PHONE %>" class="text-dark">+91 73596 91439</a>
                         </div>
                         <div class="col-12 pl-4 mt-2">
                             <a class="text-secondary h4" href="#"><i class="fa fa-facebook-square"></i></a>
@@ -117,7 +119,7 @@
                     <a href="faq.php" class="text-secondary text-decoration-none">Privacy Policy</a><br>
                 </div>
                 <div class="col-12 text-center text-secondary pt-5 pb-3" style="font-size: 14px;">
-                    &copy; 2020 India Health All Rights reserved.
+                    &copy; 2021 <%=Helper.WEBSITE_FULL_NAME%> All Rights reserved.
                 </div>
             </div>
         </div>

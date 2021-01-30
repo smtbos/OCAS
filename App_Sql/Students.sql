@@ -1,0 +1,28 @@
+CREATE TABLE [dbo].[Students]
+(
+	[std_id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [std_fname] NCHAR(100) NOT NULL, 
+    [std_mname] NCHAR(100) NOT NULL, 
+    [std_lname] NCHAR(100) NOT NULL, 
+    [std_ffname] NCHAR(100) NOT NULL, 
+    [std_fmname] NCHAR(100) NOT NULL, 
+    [std_flname] NCHAR(100) NOT NULL, 
+    [std_foccupation] NCHAR(100) NOT NULL, 
+    [std_fincome] NCHAR(100) NOT NULL, 
+    [std_email] NCHAR(100) NOT NULL, 
+    [std_mobile] NCHAR(10) NOT NULL, 
+    [std_aadhaar] NCHAR(12) NOT NULL, 
+    [std_password] NCHAR(100) NOT NULL, 
+    [std_dob] DATE NOT NULL, 
+    [std_gender] NCHAR(6) NOT NULL, 
+    [std_category] NCHAR(20) NOT NULL, 
+    [std_religion] NCHAR(20) NOT NULL, 
+    [std_nationality] NCHAR(20) NOT NULL, 
+    [std_ph] INT NOT NULL DEFAULT 0, 
+    [std_address] NCHAR(500) NOT NULL, 
+    [std_city] NCHAR(100) NOT NULL, 
+    [std_pincode] NCHAR(6) NOT NULL, 
+    [std_admission_status] INT NOT NULL DEFAULT 0, 
+    [std_status] INT NOT NULL DEFAULT 1, 
+    [std_timestamp] DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
