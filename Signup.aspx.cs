@@ -31,6 +31,21 @@ public partial class Signup : System.Web.UI.Page
         String foccupation = txt_Foccupation.Text.ToString();
         String fincome = txt_Fincome.Text.ToString();
 
+        // Authentication Details
+        String email = txt_Email.Text.ToString();
+        String mobile = txt_Mobile.Text.ToString();
+        String password = txt_Password.Text.ToString();
 
+        // Student Information
+        String dob = txt_Dob.Text.ToString();
+        String gender = dd_Gender.Text.ToString();
+        String category = dd_Category.Text.ToString();
+        String ph = dd_PH.Text.ToString();
+
+        // Contact Details
+        String address = txt_Address.Text.ToString();
+        String city = txt_City.Text.ToString();
+        String pincode = txt_Pincode.Text.ToString();
+        
     }
 }
