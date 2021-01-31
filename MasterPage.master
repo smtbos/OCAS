@@ -8,10 +8,9 @@
     </asp:ContentPlaceHolder>
     <link rel="icon" href="./public/ihm/logo_noback.png" />
     <link rel="stylesheet" href="./public/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./public/css/jquery-confirm.min.css" />
     <link rel="stylesheet" href="./public/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="./public/fa/css/font-awesome.min.css" />
-    
+
     <link rel="stylesheet" href="./public/css/style.css" />
     <link rel="stylesheet" href="./public/home.css" />
     <style>
@@ -70,6 +69,9 @@
                     <li class="nav-item  " style="font-size: 16px;">
                         <a class="nav-link" href="Signin.aspx"><i class="fa fa-sign-in"></i>&nbsp;Sign in</a>
                     </li>
+                    <li class="nav-item  " style="font-size: 16px;">
+                        <a class="nav-link" href="Signup.aspx"><i class="fa fa-plus"></i>&nbsp;Sign up</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -127,11 +129,42 @@
 
     <script src="./public/js/jquery.min.js"></script>
     <script src="./public/js/bootstrap.bundle.min.js"></script>
-    <script src="./public/js/jquery-confirm.min.js"></script>
     <script src="./public/js/jquery-ui.min.js"></script>
     <script src="./public/js/jquery.dataTables.min.js"></script>
+    <script src="./public/js/sweetalert.min.js"></script>
     <asp:ContentPlaceHolder ID="ScriptPlaceHolder" runat="server">
-
     </asp:ContentPlaceHolder>
+    <script>
+        <%
+        if (Session["amsg"] != null)
+        {
+        %>
+        $(document).ready(function () {
+            swal({
+                title: "Error",
+                text: "<%= String.Join("\\n", (String[]) Session["amsg"]) %>",
+                icon: "error"
+            });
+        });
+        <%
+            Session["amsg"] = null;
+        }
+        %>
+        <%
+        if (Session["smsg"] != null)
+        {
+        %>
+        $(document).ready(function () {
+            swal({
+                title: "Success",
+                text: "<%= String.Join("\\n", (String[]) Session["smsg"]) %>",
+                icon: "success"
+            });
+        });
+        <%
+            Session["smsg"] = null;
+        }
+        %>
+    </script>
 </body>
 </html>
