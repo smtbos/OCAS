@@ -67,4 +67,8 @@ public static class Helper
     {
         HttpContext.Current.Response.Write("hello");
     }
+
+	public static String S(Object o){
+		return o.ToString().Trim();
+	}
 }

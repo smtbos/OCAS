@@ -4,167 +4,202 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-    <link rel="icon" href="./public/ihm/logo_noback.png" />
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./public/css/jquery.dataTables.min.css" />
-    <link rel="stylesheet" href="./public/fa/css/font-awesome.min.css" />
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+	<link rel="icon" href="./public/ihm/logo_noback.png" />
+	<link rel="stylesheet" href="./public/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./public/css/jquery.dataTables.min.css" />
+	<link rel="stylesheet" href="./public/fa/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" href="./public/css/style.css" />
-    <link rel="stylesheet" href="./public/home.css" />
-    <style>
-        #my_curo::after {
-            content: "";
-            position: absolute;
-            height: 0;
-            width: 0;
-            left: 0;
-            bottom: 0;
-            border: 100px solid transparent;
-            border-left: 50vw solid #84f5f1;
-            border-right: 50vw solid #84f5f1;
-            border-bottom: 6px solid #84f5f1;
-        }
-    </style>
+	<link rel="stylesheet" href="./public/css/style.css" />
+	<link rel="stylesheet" href="./public/home.css" />
+	<style>
+		#my_curo::after {
+			content: "";
+			position: absolute;
+			height: 0;
+			width: 0;
+			left: 0;
+			bottom: 0;
+			border: 100px solid transparent;
+			border-left: 50vw solid #84f5f1;
+			border-right: 50vw solid #84f5f1;
+			border-bottom: 6px solid #84f5f1;
+		}
+	</style>
 </head>
 <body class="font-weight-bold">
 
-    <nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top " style="border-bottom: 1px solid #cacbcc !important;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">
-                <%--<img src="https://indiahealth.smtcodes.in/public/logo2.png" height="40">--%>
-                <%= Helper.WEBSITE_NAME %>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="sidebarMenu">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active" style="font-size: 16px;">
-                        <a class="nav-link" href="index.php"><i class="fa fa-home"></i>&nbsp;Home</a>
-                    </li>
-                    <li class="nav-item " style="font-size: 16px;">
-                        <a class="nav-link" href="find.php"><i class="fa fa-search"></i>&nbsp;Find</a>
-                    </li>
-                    <li class="nav-item " style="font-size: 16px;">
-                        <a class="nav-link" href="about.php"><i class="fa fa-info-circle"></i>&nbsp;About as</a>
-                    </li>
-                    <li class="nav-item " style="font-size: 16px;">
-                        <a class="nav-link" href="contact.php"><i class="fa fa-phone"></i>&nbsp;Contact as</a>
-                    </li>
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span><i class="fa fa-question-circle"></i>&nbsp;Help</span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-                            <a class="dropdown-item font-weight-bold d-none" href="report_details.php"><i class="fa fa-square"></i>&nbsp;Report Details</a>
-                            <a class="dropdown-item font-weight-bold " href="faq.php"><i class="fa fa-question-circle"></i>&nbsp;FAQs</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item  " style="font-size: 16px;">
-                        <a class="nav-link" href="Signin.aspx"><i class="fa fa-sign-in"></i>&nbsp;Sign in</a>
-                    </li>
-                    <li class="nav-item  " style="font-size: 16px;">
-                        <a class="nav-link" href="Signup.aspx"><i class="fa fa-plus"></i>&nbsp;Sign up</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+	<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top " style="border-bottom: 1px solid #cacbcc !important;">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="index.php">
+				<%--<img src="https://indiahealth.smtcodes.in/public/logo2.png" height="40">--%>
+				<%= Helper.WEBSITE_NAME %>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarMenu">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="sidebarMenu">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active" style="font-size: 16px;">
+						<a class="nav-link" href="index.php"><i class="fa fa-home"></i>&nbsp;Home</a>
+					</li>
+					<li class="nav-item " style="font-size: 16px;">
+						<a class="nav-link" href="find.php"><i class="fa fa-search"></i>&nbsp;Find</a>
+					</li>
+					<li class="nav-item " style="font-size: 16px;">
+						<a class="nav-link" href="about.php"><i class="fa fa-info-circle"></i>&nbsp;About as</a>
+					</li>
+					<li class="nav-item " style="font-size: 16px;">
+						<a class="nav-link" href="contact.php"><i class="fa fa-phone"></i>&nbsp;Contact as</a>
+					</li>
+					<li class="nav-item dropdown ">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span><i class="fa fa-question-circle"></i>&nbsp;Help</span>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+							<a class="dropdown-item font-weight-bold d-none" href="report_details.php"><i class="fa fa-square"></i>&nbsp;Report Details</a>
+							<a class="dropdown-item font-weight-bold " href="faq.php"><i class="fa fa-question-circle"></i>&nbsp;FAQs</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<%
+				if (Session["std_id"] == null)
+				{
+			%>
+			<div class="navbar-collapse">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item  " style="font-size: 16px;">
+						<a class="nav-link" href="Signin.aspx"><i class="fa fa-sign-in"></i>&nbsp;Sign in</a>
+					</li>
+					<li class="nav-item  " style="font-size: 16px;">
+						<a class="nav-link" href="Signup.aspx"><i class="fa fa-plus"></i>&nbsp;Sign up</a>
+					</li>
+				</ul>
+			</div>
+			<%
+				}
+				else
+				{
+			%>
+			<div class="navbar-collapse">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="text-dark"><i class="fa fa-user-circle"></i>&nbsp; <%= Session["std_fname"] %></span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item font-weight-bold disabled" href="#"><i class="fa fa-hashtag"></i>aaaab</a>
+							<a class="dropdown-item " href="MyProfile.aspx"><i class="fa fa-user"></i>&nbsp;Profile</a>
+							<a class="dropdown-item " href="my_report.php"><i class="fa fa-list-ul"></i>My Reports</a>
+                                <a class="dropdown-item " href="my_health.php"><i class="fa fa-heartbeat"></i>My Health</a>
+                                <a class="dropdown-item active" href="index.php"><i class="fa fa-home"></i>Home</a>
+							<a class="dropdown-item" href="admin/"><i class="fa fa-user"></i>Goto Admin</a>
+							<a class="dropdown-item" href="doctor/"><i class="fa fa-user-md"></i>Goto Doctor</a>
+							<a class="dropdown-item" href="laboratory/"><i class="fa fa-flask"></i>Goto Laboratory</a>
+							<a class="dropdown-item" href="helper/"><i class="fa fa-user-o"></i>Goto Helper</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item " href="Change_Password.aspx"><i class="fa fa-lock"></i>&nbsp;Chnage Password</a>
+                             <a class="dropdown-item" href="Signout.aspx"><i class="fa fa-sign-out"></i>&nbsp;Sign Out</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<%
+				}
+			%>
+		</div>
+	</nav>
 
-    <form id="form1" runat="server">
-        <asp:ContentPlaceHolder ID="MainPlaceHolder" runat="server">
-        </asp:ContentPlaceHolder>
-    </form>
+	<form id="form1" runat="server">
+		<asp:ContentPlaceHolder ID="MainPlaceHolder" runat="server">
+		</asp:ContentPlaceHolder>
+	</form>
 
-    <footer class="border-top text-dark pb-3" style="border-top: 1px solid #cacbcc !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-12 text-lg-left text-center pt-4 pt-4">
-                    <div class="row">
-                        <div class="col-lg-9 offset-lg-0 col-8 offset-2 footer-website-title">
-                            <%--<img src="https://indiahealth.smtcodes.in/public/logo.png" class="w-100"> --%>
-                            <%=Helper.WEBSITE_NAME%>
-                        </div>
-                        <div class="col-12 pl-4">
-                            <a href="mailto:<%= Helper.WEBSITE_EMAIL %>" class="text-dark"><%= Helper.WEBSITE_EMAIL %></a><br>
-                            <a href="tel:+91<%= Helper.WEBSITE_PHONE %>" class="text-dark">+91 73596 91439</a>
-                        </div>
-                        <div class="col-12 pl-4 mt-2">
-                            <a class="text-secondary h4" href="#"><i class="fa fa-facebook-square"></i></a>
-                            <a class="text-secondary h4 pl-2" href="#"><i class="fa fa-twitter-square"></i></a>
-                            <a class="text-secondary h4 pl-2" href="#"><i class="fa fa-linkedin-square"></i></a>
-                            <a class="text-secondary h4 pl-2" href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3 d-lg-block d-none pt-4 pt-4">
-                    <h5 class="font-weight-bold">PAGES</h5>
-                    <a href="index.php" class="text-secondary text-decoration-none">Home</a><br>
-                    <a href="about.php" class="text-secondary text-decoration-none">About us</a><br>
-                    <a href="find.php" class="text-secondary text-decoration-none">Find</a><br>
-                </div>
-                <div class="col-3 d-lg-block d-none pt-4 pt-4">
-                    <h5 class="font-weight-bold">SUPPORT</h5>
-                    <a href="contact.php" class="text-secondary text-decoration-none">Contact us</a><br>
-                    <a href="query.php" class="text-secondary text-decoration-none">Querys</a><br>
-                    <a href="faq.php" class="text-secondary text-decoration-none">FAQs</a><br>
-                </div>
-                <div class="col-3 d-lg-block d-none pt-4 pt-4">
-                    <h5 class="font-weight-bold">LEGAL</h5>
-                    <a href="faq.php" class="text-secondary text-decoration-none">Terms of Service</a><br>
-                    <a href="faq.php" class="text-secondary text-decoration-none">Privacy Policy</a><br>
-                </div>
-                <div class="col-12 text-center text-secondary pt-5 pb-3" style="font-size: 14px;">
-                    &copy; 2021 <%=Helper.WEBSITE_FULL_NAME%> All Rights reserved.
-                </div>
-            </div>
-        </div>
-    </footer>
+	<footer class="border-top text-dark pb-3" style="border-top: 1px solid #cacbcc !important;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-12 text-lg-left text-center pt-4 pt-4">
+					<div class="row">
+						<div class="col-lg-9 offset-lg-0 col-8 offset-2 footer-website-title">
+							<%--<img src="https://indiahealth.smtcodes.in/public/logo.png" class="w-100"> --%>
+							<%=Helper.WEBSITE_NAME%>
+						</div>
+						<div class="col-12 pl-4">
+							<a href="mailto:<%= Helper.WEBSITE_EMAIL %>" class="text-dark"><%= Helper.WEBSITE_EMAIL %></a><br>
+							<a href="tel:+91<%= Helper.WEBSITE_PHONE %>" class="text-dark">+91 73596 91439</a>
+						</div>
+						<div class="col-12 pl-4 mt-2">
+							<a class="text-secondary h4" href="#"><i class="fa fa-facebook-square"></i></a>
+							<a class="text-secondary h4 pl-2" href="#"><i class="fa fa-twitter-square"></i></a>
+							<a class="text-secondary h4 pl-2" href="#"><i class="fa fa-linkedin-square"></i></a>
+							<a class="text-secondary h4 pl-2" href="#"><i class="fa fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-3 d-lg-block d-none pt-4 pt-4">
+					<h5 class="font-weight-bold">PAGES</h5>
+					<a href="index.php" class="text-secondary text-decoration-none">Home</a><br>
+					<a href="about.php" class="text-secondary text-decoration-none">About us</a><br>
+					<a href="find.php" class="text-secondary text-decoration-none">Find</a><br>
+				</div>
+				<div class="col-3 d-lg-block d-none pt-4 pt-4">
+					<h5 class="font-weight-bold">SUPPORT</h5>
+					<a href="contact.php" class="text-secondary text-decoration-none">Contact us</a><br>
+					<a href="query.php" class="text-secondary text-decoration-none">Querys</a><br>
+					<a href="faq.php" class="text-secondary text-decoration-none">FAQs</a><br>
+				</div>
+				<div class="col-3 d-lg-block d-none pt-4 pt-4">
+					<h5 class="font-weight-bold">LEGAL</h5>
+					<a href="faq.php" class="text-secondary text-decoration-none">Terms of Service</a><br>
+					<a href="faq.php" class="text-secondary text-decoration-none">Privacy Policy</a><br>
+				</div>
+				<div class="col-12 text-center text-secondary pt-5 pb-3" style="font-size: 14px;">
+					&copy; 2021 <%=Helper.WEBSITE_FULL_NAME%> All Rights reserved.
+				</div>
+			</div>
+		</div>
+	</footer>
 
-    <script src="./public/js/jquery.min.js"></script>
-    <script src="./public/js/bootstrap.bundle.min.js"></script>
-    <script src="./public/js/jquery-ui.min.js"></script>
-    <script src="./public/js/jquery.dataTables.min.js"></script>
-    <script src="./public/js/sweetalert.min.js"></script>
-    <asp:ContentPlaceHolder ID="ScriptPlaceHolder" runat="server">
-    </asp:ContentPlaceHolder>
-    <script>
+	<script src="./public/js/jquery.min.js"></script>
+	<script src="./public/js/bootstrap.bundle.min.js"></script>
+	<script src="./public/js/jquery-ui.min.js"></script>
+	<script src="./public/js/jquery.dataTables.min.js"></script>
+	<script src="./public/js/sweetalert.min.js"></script>
+	<asp:ContentPlaceHolder ID="ScriptPlaceHolder" runat="server">
+	</asp:ContentPlaceHolder>
+	<script>
         <%
-        if (Session["amsg"] != null)
-        {
+		if (Session["amsg"] != null)
+		{
         %>
-        $(document).ready(function () {
-            swal({
-                title: "Error",
-                text: "<%= String.Join("\\n", (String[]) Session["amsg"]) %>",
-                icon: "error"
-            });
-        });
+		$(document).ready(function () {
+			swal({
+				title: "Error",
+				text: "<%= String.Join("\\n", (String[]) Session["amsg"]) %>",
+				icon: "error"
+			});
+		});
+		<%
+			Session["amsg"] = null;
+		}
+        %>
         <%
-            Session["amsg"] = null;
-        }
+		if (Session["smsg"] != null)
+		{
         %>
-        <%
-        if (Session["smsg"] != null)
-        {
+		$(document).ready(function () {
+			swal({
+				title: "Success",
+				text: "<%= String.Join("\\n", (String[]) Session["smsg"]) %>",
+				icon: "success"
+			});
+		});
+		<%
+			Session["smsg"] = null;
+		}
         %>
-        $(document).ready(function () {
-            swal({
-                title: "Success",
-                text: "<%= String.Join("\\n", (String[]) Session["smsg"]) %>",
-                icon: "success"
-            });
-        });
-        <%
-            Session["smsg"] = null;
-        }
-        %>
-    </script>
+	</script>
 </body>
 </html>

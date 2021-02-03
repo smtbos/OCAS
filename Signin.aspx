@@ -11,15 +11,15 @@
                     <h3 class="font-weight-bold text-success">Sign in Form</h3>
                 </div>
                 <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="Username" Text="<i class='fa fa-user'></i> Username : " />
-                    <asp:TextBox runat="server" ID="Username" CssClass="form-control" />
+                    <asp:Label runat="server" AssociatedControlID="txt_Email" Text="<i class='fa fa-user'></i> Username : " />
+                    <asp:TextBox runat="server" ID="txt_Email" CssClass="form-control" />
                 </div>
                 <div class="form-group">
-                    <asp:Label runat="server" AssociatedControlID="Password" Text="<i class='fa fa-lock'></i> Password : " />
-                    <asp:TextBox runat="server" ID="Password" CssClass="form-control" />
+                    <asp:Label runat="server" AssociatedControlID="txt_Password" Text="<i class='fa fa-lock'></i> Password : " />
+                    <asp:TextBox runat="server" ID="txt_Password" CssClass="form-control" />
                 </div>
                 <div>
-                    <asp:LinkButton runat="server" ID="Submit_btn" CssClass="btn btn-success">
+                    <asp:LinkButton runat="server" ID="Submit_btn" CssClass="btn btn-success" OnClick="Submit_btn_Click">
                     <i class='fa fa-sign-in'></i> Signin
                     </asp:LinkButton>
                     <span class="float-right mt-2 pr-3"><a href="#" class="text-decoration-none">Forgot Password?</a></span>
