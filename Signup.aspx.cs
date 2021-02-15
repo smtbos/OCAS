@@ -16,7 +16,7 @@ public partial class Signup : System.Web.UI.Page
 	{
 		con = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlcon"].ConnectionString);
 		con.Open();
-		//Load_Demo_Data();
+		Load_Demo_Data();
 	}
 
 	protected void btn_Signup_Click(object sender, EventArgs e)
@@ -60,6 +60,7 @@ public partial class Signup : System.Web.UI.Page
 		if (Convert.ToBoolean(res))
 		{
 			Session["std_id"] = res;
+			Session["std_fname"] = fname;
 			Helper.setSmsg("Student Registraion Successfull");
 			Response.Redirect("Default.aspx");
 		}
@@ -88,7 +89,7 @@ public partial class Signup : System.Web.UI.Page
 		txt_Email.Text = "smtbos@gmail.com";
 		txt_Mobile.Text = "8128389164";
 
-		txt_Dob.Text = "2000-11-05";
+		txt_Dob.Text = "2001-01-01";
 		dd_Gender.Text = "Male";
 		dd_Category.Text = "EWS";
 		dd_PH.Text = "No";

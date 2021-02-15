@@ -9,6 +9,9 @@ public partial class MyProfile : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+		Configuration conf = WebConfigurationManager.OpenWebConfiguration(System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath);
+		SessionStateSection section = (SessionStateSection)conf.GetSection("system.web/sessionState");
+		int timeout = (int)section.Timeout.TotalMinutes;
+		Response.Write(timeout);
     }
 }

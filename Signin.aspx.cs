@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
-
+using System.Web.Configuration;
 public partial class Signin : System.Web.UI.Page
 {
 	private SqlConnection con;
@@ -16,6 +16,10 @@ public partial class Signin : System.Web.UI.Page
 	{
 		con = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlcon"].ConnectionString);
 		con.Open();
+		Configuration conf = WebConfigurationManager.OpenWebConfiguration(System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath);
+		SessionStateSection section = (SessionStateSection)conf.GetSection("system.web/sessionState");
+		int timeout = (int)section.Timeout.TotalMinutes;
+		Response.Write(timeout);
 	}
 
 	protected void Submit_btn_Click(object sender, EventArgs e)
